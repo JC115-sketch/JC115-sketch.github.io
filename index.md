@@ -3,8 +3,6 @@ layout: home
 title: Home
 ---
 
-# Welcome
-
 — welcome to my blog.
 
 Here I write about all of my projects, opinions, etc..
