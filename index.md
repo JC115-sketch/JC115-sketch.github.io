@@ -1,6 +1,14 @@
-# Jacob Carella - My Blog
+---
+layout: home
+title: Home
+---
 
-Hello! This is my very first post on my own technical blog.
+# Welcome
 
-I’ll be writing about my projects, opinions, notes, and walkthroughs. 
+— welcome to my blog.
+
+Here I write about all of my projects, opinions, etc..
+
+Check out my [latest posts](/blog) or visit the [About](/about) page to learn more about me.
+
 
