@@ -1,0 +1,24 @@
+title: "My Blog"
+author: "Jacob Carella"
+email: your.email@example.com
+description: >-
+  A blog about my projects, opinions, guides, thoughts, and overall journey.
+
+baseurl: "" # Leave blank for GitHub Pages user/organization site
+url: "https://jc-115-sketch.github.io" # Change to your real site URL
+
+# Theme
+theme: minima
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Social links (optional)
+github_username: jc-115-sketch
+twitter_username: yourhandle
+
+# Collections
+collections:
+  posts:
+    output: true
