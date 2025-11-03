@@ -45,7 +45,7 @@ A little javascript/html attempt:
 </style>
 
 <div class="demo-area">
-  <p>Click below to activate the Dragon Scimitar cursor 🐉</p>
+  <p>Click below to activate the Dragon Scimitar cursor </p>
   <button id="activate" class="cursor-button">Activate Cursor</button>
   <button id="restore" class="cursor-button" style="display:none;">Restore Default</button>
 </div>
