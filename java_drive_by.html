@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Java Installer — (totally legit)</title>
+<style>
+  body { font-family: "Segoe UI", Tahoma, sans-serif; background:#111; color:#ddd; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;}
+  .panel { width:520px; background:#0f0f12; border:1px solid #222; padding:18px; border-radius:6px; box-shadow:0 10px 30px rgba(0,0,0,0.6);}
+  h1 { margin:0 0 8px; font-size:18px; color:#f5f5f5; }
+  p.sub { margin:0 0 14px; color:#999; font-size:13px; }
+  .log { background:#080808; border:1px solid #121212; padding:10px; height:160px; overflow:auto; font-family: monospace; color:#9fd; font-size:12px; margin-bottom:12px; }
+  .progress-bar { height:18px; background:#111; border:1px solid #222; border-radius:4px; overflow:hidden; }
+  .progress-inner { height:100%; width:0%; background:linear-gradient(90deg,#ff7b7b,#ffb86b); transition: width 300ms ease; }
+  .controls { margin-top:12px; display:flex; gap:8px; }
+  .btn { padding:8px 12px; background:#2b2b2b; color:#fff; border-radius:5px; cursor:pointer; border:1px solid #333; }
+  .btn:active{transform:translateY(1px)}
+  .small { font-size:12px; color:#999;}
+</style>
+</head>
+<body>
+  <div class="panel">
+    <h1>Java Installer</h1>
+    <p class="sub">Secure setup for Legacy Runescape Mods — (demo only)</p>
+
+    <div class="log" id="log">
+      [info] Preparing installer...
+    </div>
+
+    <div class="progress-bar" aria-hidden="true"><div class="progress-inner" id="prog"></div></div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn">Start Install</button>
+      <button id="cancelBtn" class="btn">Cancel</button>
+      <button id="downloadBtn" class="btn" style="display:none">Download README</button>
+    </div>
+
+    <p class="small" style="margin-top:8px">Trimming SSNs.</p>
+  </div>
+
+<script>
+const log = document.getElementById('log');
+const prog = document.getElementById('prog');
+const startBtn = document.getElementById('startBtn');
+const cancelBtn = document.getElementById('cancelBtn');
+const downloadBtn = document.getElementById('downloadBtn');
+
+let interval=null, pct=0;
+function appendLine(s){ log.innerText += "\n" + s; log.scrollTop = log.scrollHeight; }
+
+startBtn.addEventListener('click', ()=>{
+  startBtn.disabled=true;
+  appendLine("[info] Starting installer...");
+  pct=0; prog.style.width='0%';
+  interval = setInterval(()=>{
+    pct += Math.floor(Math.random()*8)+4;
+    if (pct>100) pct=100;
+    prog.style.width = pct + '%';
+    appendLine("[install] step - " + pct + "%");
+    if (pct >= 100) {
+      clearInterval(interval);
+      appendLine("Installation complete.");
+      startBtn.style.display='none';
+      downloadBtn.style.display='inline-block';
+      // silly finale
+      setTimeout(()=> appendLine("You owe 10M GP to XxX69Slayer1337XxX"), 700);
+    }
+  }, 600);
+});
+
+cancelBtn.addEventListener('click', ()=>{
+  if (interval) clearInterval(interval);
+  appendLine("[warn] Installation cancelled by user. Pussy.");
+  startBtn.disabled=false;
+});
+
+downloadBtn.addEventListener('click', ()=>{
+  // create a harmless README file for download
+  const blob = new Blob(["Thanks for coming! RSN - Earth Was"], {type:'text/plain'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'README-demo.txt'; document.body.appendChild(a); a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(url); a.remove(); }, 1500);
+});
+</script>
+</body>
+</html>
