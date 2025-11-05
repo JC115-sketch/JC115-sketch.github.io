@@ -7,7 +7,7 @@ It is a rainy day outside, so let's continue working on our journey of programmi
 
 ![The Vicious Curved Sword in Question]()
 
-My journey making the classic dragon scimitar cursor executable, and the wavy and flashing text generator program...
+My journey making the classic dragon scimitar cursor executable, of course it all started here...
 
 A little javascript/html attempt:
 
