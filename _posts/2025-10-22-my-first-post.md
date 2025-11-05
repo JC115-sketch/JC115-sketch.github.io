@@ -53,7 +53,7 @@ A little javascript/html attempt:
 <script>
   const activateBtn = document.getElementById('activate');
   const restoreBtn = document.getElementById('restore');
-  const scimitarURL = '/assets/dscim_img.png'; // adjust if in subfolder
+  const scimitarURL = '/assets/dscim_cursor.png'; // adjust if in subfolder
 
   activateBtn.addEventListener('click', () => {
     document.body.style.cursor = `url(${scimitarURL}) 10 28, auto`;
