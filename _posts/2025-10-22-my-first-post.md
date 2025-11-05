@@ -71,7 +71,7 @@ A little javascript/html attempt:
 Of course, the real one changed the cursor system wide. I am legitmately curious if there was a built in way to revert back to the default Windows cursor in the most available dragon scimitar cursor program circa 2010 or so. Well fear not! I have created my own. It's totally safe of course, just a joke way of making a replica of a 'Java drive by' or drive by download program that got at least one kid at every middle school in the US and Britain into some sort of trouble. 
 
 <p>
-  <a class="btn-demo" href="/fake-installer.html" target="_blank" rel="noopener">
+  <a class="btn-demo" href="/java_drive_by.html" target="_blank" rel="noopener">
     But it was from dragonscimitarcursorofficial.com!! 
   </a>
 </p>
